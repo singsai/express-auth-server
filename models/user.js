@@ -1,5 +1,3 @@
-// https://www.udemy.com/react-redux-tutorial/learn/v4/t/lecture/4755170?start=0
-
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 const bcrypt = require('bcrypt-nodejs')
@@ -10,8 +8,7 @@ const userSchema = new Schema({
 	password: String
 })
 
-// On Save Hook, encrypt password
-// Before saving a model, run this function
+// on Save hook, encrypt password
 userSchema.pre('save', function(next) {
 	// get access to the user model
 	const user = this
